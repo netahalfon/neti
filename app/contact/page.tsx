@@ -27,46 +27,6 @@ export default function ContactPage() {
 
   return (
     <div className="min-h-screen">
-      {/* Header */}
-      <header className="border-b border-border bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 sticky top-0 z-50">
-        <div className="container mx-auto px-4 py-4 flex items-center justify-between">
-          <Link href="/" className="flex items-center gap-2">
-            <div className="w-8 h-8 bg-primary rounded-full" />
-            <span className="font-serif text-2xl font-bold text-foreground">NETISEA</span>
-          </Link>
-
-          <nav className="hidden md:flex items-center gap-8">
-            <Link href="/shop" className="text-sm font-medium text-foreground hover:text-primary transition-colors">
-              Shop
-            </Link>
-            <Link
-              href="/collections"
-              className="text-sm font-medium text-foreground hover:text-primary transition-colors"
-            >
-              Collections
-            </Link>
-            <Link href="/about" className="text-sm font-medium text-foreground hover:text-primary transition-colors">
-              About
-            </Link>
-            <Link href="/contact" className="text-sm font-medium text-primary">
-              Contact
-            </Link>
-          </nav>
-
-          <div className="flex items-center gap-4">
-            <Link href="/wishlist">
-              <Button variant="ghost" size="icon">
-                <Heart className="w-5 h-5" />
-              </Button>
-            </Link>
-            <Link href="/cart">
-              <Button variant="ghost" size="icon">
-                <ShoppingBag className="w-5 h-5" />
-              </Button>
-            </Link>
-          </div>
-        </div>
-      </header>
 
       {/* Page Header */}
       <section className="bg-secondary py-12">

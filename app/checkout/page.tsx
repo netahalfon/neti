@@ -60,14 +60,7 @@ export default function CheckoutPage() {
   if (items.length === 0) {
     return (
       <div className="min-h-screen">
-        <header className="border-b border-border bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 sticky top-0 z-50">
-          <div className="container mx-auto px-4 py-4 flex items-center justify-between">
-            <Link href="/" className="flex items-center gap-2">
-              <div className="w-8 h-8 bg-primary rounded-full" />
-              <span className="font-serif text-2xl font-bold text-foreground">The Clay Kingdom</span>
-            </Link>
-          </div>
-        </header>
+        
         <div className="container mx-auto px-4 py-16 text-center">
           <ShoppingBag className="w-16 h-16 text-muted-foreground mx-auto mb-4" />
           <h2 className="font-serif text-2xl font-bold text-foreground mb-2">Your cart is empty</h2>
