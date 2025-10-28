@@ -24,57 +24,7 @@ export default function WishlistPage() {
 
   return (
     <div className="min-h-screen">
-      {/* Header */}
-      <header className="border-b border-border bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 sticky top-0 z-50">
-        <div className="container mx-auto px-4 py-4 flex items-center justify-between">
-          <Link href="/" className="flex items-center gap-2">
-            <div className="w-8 h-8 bg-primary rounded-full" />
-            <span className="font-serif text-2xl font-bold text-foreground">The Clay Kingdom</span>
-          </Link>
-
-          <nav className="hidden md:flex items-center gap-8">
-            <Link href="/shop" className="text-sm font-medium text-foreground hover:text-primary transition-colors">
-              Shop
-            </Link>
-            <Link
-              href="/collections"
-              className="text-sm font-medium text-foreground hover:text-primary transition-colors"
-            >
-              Collections
-            </Link>
-            <Link href="/about" className="text-sm font-medium text-foreground hover:text-primary transition-colors">
-              About
-            </Link>
-            <Link href="/contact" className="text-sm font-medium text-foreground hover:text-primary transition-colors">
-              Contact
-            </Link>
-          </nav>
-
-          <div className="flex items-center gap-4">
-            <Link href="/wishlist">
-              <Button variant="ghost" size="icon" className="relative">
-                <Heart className="w-5 h-5" />
-                {items.length > 0 && (
-                  <span className="absolute -top-1 -right-1 w-5 h-5 bg-primary text-primary-foreground text-xs rounded-full flex items-center justify-center">
-                    {items.length}
-                  </span>
-                )}
-              </Button>
-            </Link>
-            <Link href="/cart">
-              <Button variant="ghost" size="icon" className="relative">
-                <ShoppingBag className="w-5 h-5" />
-                {totalItems > 0 && (
-                  <span className="absolute -top-1 -right-1 w-5 h-5 bg-primary text-primary-foreground text-xs rounded-full flex items-center justify-center">
-                    {totalItems}
-                  </span>
-                )}
-              </Button>
-            </Link>
-          </div>
-        </div>
-      </header>
-
+     
       {/* Wishlist Content */}
       <section className="py-12">
         <div className="container mx-auto px-4">
@@ -132,7 +82,7 @@ export default function WishlistPage() {
           )}
         </div>
       </section>
-      
+
     </div>
   )
 }
