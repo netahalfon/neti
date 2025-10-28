@@ -98,65 +98,6 @@ export default function CollectionsPage() {
         </div>
       </section>
 
-      {/* Footer */}
-      <footer className="bg-foreground text-background py-12">
-        <div className="container mx-auto px-4">
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
-            <div>
-              <h3 className="font-serif text-xl font-bold mb-4">NETISEA</h3>
-              <p className="text-sm text-background/80">Handcrafted pottery and ceramics inspired by coastal beauty.</p>
-            </div>
-            <div>
-              <h4 className="font-semibold mb-4">Shop</h4>
-              <ul className="space-y-2 text-sm text-background/80">
-                <li>
-                  <Link href="/shop" className="hover:text-background transition-colors">
-                    All Products
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/collections" className="hover:text-background transition-colors">
-                    Collections
-                  </Link>
-                </li>
-              </ul>
-            </div>
-            <div>
-              <h4 className="font-semibold mb-4">About</h4>
-              <ul className="space-y-2 text-sm text-background/80">
-                <li>
-                  <Link href="/about" className="hover:text-background transition-colors">
-                    Our Story
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/contact" className="hover:text-background transition-colors">
-                    Contact
-                  </Link>
-                </li>
-              </ul>
-            </div>
-            <div>
-              <h4 className="font-semibold mb-4">Support</h4>
-              <ul className="space-y-2 text-sm text-background/80">
-                <li>
-                  <Link href="/shipping" className="hover:text-background transition-colors">
-                    Shipping
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/returns" className="hover:text-background transition-colors">
-                    Returns
-                  </Link>
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div className="border-t border-background/20 pt-8 text-center text-sm text-background/60">
-            <p>&copy; 2025 NETISEA. All rights reserved.</p>
-          </div>
-        </div>
-      </footer>
     </div>
   )
 }
