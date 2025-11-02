@@ -29,7 +29,10 @@ export const metadata: Metadata = {
   generator: "v0.app",
   other: {
   "google-site-verification": "xpHYEa6Y94EZFING4nyj3XuA6_L24-jwdGQMC720G3g",
-  }
+  },
+  icons: {
+    icon: "/favicon.ico",
+  },
 };
 export default function RootLayout({
   children,
