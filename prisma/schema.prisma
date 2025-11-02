@@ -1,0 +1,62 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+enum MediaType {
+  IMAGE
+  VIDEO
+}
+
+model Category {
+  id            String         @id @default(cuid())
+  name_he       String
+  name_en       String
+  slug          String         @unique
+  subCategories SubCategory[]
+}
+
+model SubCategory {
+  id          String     @id @default(cuid())
+  name_he     String
+  name_en     String
+  slug        String     @unique
+  categoryId  String
+  category    Category   @relation(fields: [categoryId], references: [id])
+  products    Product[]
+}
+
+model Product {
+  id                String          @id @default(cuid())
+  name_he           String
+  name_en           String
+  description_he    String?
+  description_en    String?
+  price             Float
+  salePrice         Float?
+  size              String?
+  stock             Int             @default(0)
+  inStock           Boolean         @default(true)
+  orderCount        Int             @default(0)
+  subCategoryId     String
+  subCategory       SubCategory     @relation(fields: [subCategoryId], references: [id])
+  slug              String          @unique
+  isFeatured        Boolean         @default(false)
+  media             ProductMedia[]
+  createdAt         DateTime        @default(now())
+  updatedAt         DateTime        @updatedAt
+}
+
+model ProductMedia {
+  id          String    @id @default(cuid())
+  url         String
+  type        MediaType @default(IMAGE)
+  productId   String
+  product     Product   @relation(fields: [productId], references: [id])
+  index       Int       @default(0)
+  createdAt   DateTime  @default(now())
+}
