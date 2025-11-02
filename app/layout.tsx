@@ -27,8 +27,10 @@ export const metadata: Metadata = {
   description:
     "Discover handcrafted pottery and ceramics inspired by coastal beauty",
   generator: "v0.app",
+  other: {
+  "google-site-verification": "xpHYEa6Y94EZFING4nyj3XuA6_L24-jwdGQMC720G3g",
+  }
 };
-
 export default function RootLayout({
   children,
 }: Readonly<{
